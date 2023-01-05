@@ -20,6 +20,10 @@ export default function TodoItem({ item }) {
 
   function toggleItemCompletion() {
     const index = todoList.findIndex((todoItem) => todoItem === item);
+    // We slice the original todo list front and back (excluding the item we work with)
+    // then edit the item and put the front and back around it so the items are not
+    // thrown away when placing the whole list back
+    // ! lists in React ar tuples (not mutable) so we have to replace the WHOLE list.
     const newList = [
       ...todoList.slice(0, index),
       {
