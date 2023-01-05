@@ -1,0 +1,96 @@
+body {
+    background-color: #eeeeee;
+    padding: 20px;
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.header {
+    border-radius: 5px;
+}
+
+ul.header li {
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    border-radius: 5px;
+}
+
+ul.header {
+    background-color: #555555;
+    padding: 0;
+    border-radius: 5px;
+}
+
+ul.header li a {
+    color: #FFF;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 20px;
+    display: inline-block;
+}
+
+ul.header li:first-child a{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.content {
+    background-color: #66CCFF;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.content h2 {
+    padding: 0;
+    margin: 0;
+}
+
+.content li {
+    margin-bottom: 10px;
+}
+
+.active {
+    background-color: #0099FF;
+}
+
+.todoListMain .header input {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #FFF;
+    border-radius: 5px;
+}
+
+.todoListMain .header button {
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px;
+    background-color: #0066FF;
+    color: #FFF;
+    border: 2px solid #0066FF;
+    border-radius: 5px;
+}
+
+.todoListMain .header button:hover {
+    background-color: #003399;
+    border: 2px solid #003399;
+    cursor: pointer;
+}
+
+.todoListMain .theList {
+    list-style: none;
+    padding-left: 0;
+    width: 255px;
+}
+
+.todoListMain .theList li {
+    color: #333;
+    background-color: rgba(255,255,255,.5);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.smallerText {
+    font-size: 60%;
+}
