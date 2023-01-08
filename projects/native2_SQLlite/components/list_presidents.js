@@ -11,7 +11,8 @@ import {
   Text,
 } from "react-native";
 
-import { useState, useEffect, useFocusEffect } from "react";
+import { useState, useEffect } from "react";
+import { useFocusEffect } from "@react-navigation/native";
 
 import UsaDB from "../usa_db";
 
@@ -33,10 +34,13 @@ export default function ListPresidents({ navigation }) {
   });
 
   function handleOnPress(id) {
+    console.log("[debug onpress]");
+
     navigation.navigate("Details", { id: id });
   }
 
   function handleInsert() {
+    console.log("[debug insert]");
     navigation.navigate("Details", { id: 0 });
   }
 

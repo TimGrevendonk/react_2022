@@ -12,6 +12,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Promises from "./components/promises";
 
 function HomeScreen({ navigation }) {
+  console.log("[debug home] here");
+
   return (
     <View style={styles.container}>
       <ListPresidents navigation={navigation} />
@@ -20,6 +22,8 @@ function HomeScreen({ navigation }) {
 }
 // need route to get parameters from the naviagtion.
 function DetailsScreen({ route, navigation }) {
+  console.log("[debug details] here");
+
   return (
     <View style={styles.container}>
       <DetailsPresident route={route} navigation={navigation} />
@@ -30,11 +34,15 @@ function DetailsScreen({ route, navigation }) {
 // the stack object, to give the routing structure of the programm.
 const Stack = createNativeStackNavigator();
 
+console.log("[debug  stack]");
+
 export default function App() {
   useEffect(() => {
     // comment after first run!!!
-    UsaDB.initDb();
+    // UsaDB.initDb();
   }, []);
+
+  console.log("[debug app] here");
 
   return (
     <NavigationContainer>

@@ -9,8 +9,10 @@ import { useState, useEffect } from "react";
 import UsaDB from "../usa_db";
 
 export default function DetailsPresident({ route, navigation }) {
+  console.log("[debug inside details]");
+
   // { id } fishes out the id parameter out of the object.
-  // alternative: route.id gives only the id not the whole opject.
+  // alternative: route.id gives only the id not the whole object.
   const { id } = route.params;
 
   const [president, setPresident] = useState({ id: 0, name: "", term: "" });
@@ -26,6 +28,7 @@ export default function DetailsPresident({ route, navigation }) {
   async function getPresidentById(id) {
     const result = await UsaDB.getPresidentById(id);
     setPresident(result);
+    alert(president.party);
   }
 
   function handleOnPress() {
@@ -73,6 +76,7 @@ export default function DetailsPresident({ route, navigation }) {
         keyboardType="numeric"
         placeholder="Enter term"
       />
+
       {id !== 0 && (
         <>
           <TouchableOpacity style={styles.button} onPress={handleOnPress}>

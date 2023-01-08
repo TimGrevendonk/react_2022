@@ -158,11 +158,11 @@ export default class UsaDB {
 
   static insertPresident(president) {
     return new Promise((resolve) => {
-      db.transaction((tx) => {
-        tx.executeSql(
+      db.transaction((transaction) => {
+        transaction.executeSql(
           "INSERT INTO president (name, term) VALUES (?,?)",
           [president.name, president.term],
-          (tx, results) => {
+          (transaction, results) => {
             if (results.rowsAffected == 0) {
               resolve(false);
             } else {
