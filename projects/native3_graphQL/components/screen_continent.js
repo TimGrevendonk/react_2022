@@ -21,14 +21,14 @@ export default function ContinentScreen() {
     <SectionList
       // sectionlist is gebruikt voor groeperingen.
       sections={data.continents}
-      keyExtractor={(item, index) => item + index}
-      // renderimte is done for each item. (countryitem).
-      renderItem={({ item }) => <CountryItem country={item} />}
-      ItemSeparatorComponent={Separator}
-      // done for each header.
       renderSectionHeader={({ section }) => (
         <ContinentHeader continent={section} />
       )}
+      keyExtractor={(item, index) => item + index}
+      // renderitem is done for each item. (countryitem).
+      renderItem={({ item }) => <CountryItem country={item} />}
+      ItemSeparatorComponent={Separator}
+      // done for each header.
     />
   );
 }

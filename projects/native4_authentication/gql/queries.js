@@ -10,6 +10,22 @@ export const GET_CONTINENTS = gql`
   }
 `;
 
+export const GET_USER_COUNTRIES = gql`
+  query GetCountries($uid: String) {
+    visits(where: { uid: { _eq: $uid } }) {
+      uid
+      country {
+        name
+        capital
+        emoji
+        continent {
+          name
+        }
+      }
+    }
+  }
+`;
+
 export const GET_COUNTRIES = gql`
   query GetCountries {
     countries(order_by: { name: asc }) {

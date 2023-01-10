@@ -18,7 +18,7 @@ export default function HomeScreen() {
 
   return (
     <FlatList
-      data={data.countries}
+      data={data.continents}
       renderItem={({ item }) => <ContinentItem continent={item} />}
       // the key for each item.
       keyExtractor={(item, index) => index}
