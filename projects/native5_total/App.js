@@ -17,6 +17,9 @@ import TodoScreen from "./components/todo_screen";
 import StudentsListScreen from "./components/students/list_screen";
 import StudentsDetailsScreen from "./components/students/details_screen";
 
+import CoursesListScreen from "./components/courses/list_screen";
+import CoursesDetailsScreen from "./components/courses/details_screen";
+
 import "./config/firebase";
 import { useAuthentication } from "./hooks/use_authentication";
 
@@ -36,6 +39,7 @@ const client = new ApolloClient({
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 const StudentsStack = createNativeStackNavigator();
+const CourseStack = createNativeStackNavigator();
 
 const theme = createTheme({
   lightColors: {
@@ -60,6 +64,22 @@ function StudentsScreen() {
         options={{ title: "Details" }}
       />
     </StudentsStack.Navigator>
+  );
+}
+function CourseScreen() {
+  return (
+    <CourseStack.Navigator>
+      <CourseStack.Screen
+        name="CourseList"
+        component={CoursesListScreen}
+        options={{ title: "Courses" }}
+      />
+      <CourseStack.Screen
+        name="CourseDetails"
+        component={CoursesDetailsScreen}
+        options={{ title: "Details" }}
+      />
+    </CourseStack.Navigator>
   );
 }
 
@@ -105,7 +125,11 @@ export default function App() {
                 component={StudentsScreen}
                 options={{ headerShown: false }}
               />
-              <Tab.Screen name="Courses" component={TodoScreen} />
+              <Tab.Screen
+                name="Courses"
+                component={CourseScreen}
+                options={{ headerShown: false }}
+              />
               <Tab.Screen name="Enrollments" component={TodoScreen} />
             </Tab.Navigator>
           ) : (

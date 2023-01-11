@@ -1,6 +1,7 @@
 import { atom, selector } from "recoil";
 import WeatherApi from "./apis/weather_api";
 
+// * add "recoil" in front of the names and key names
 export const cityState = atom({
   key: "cityState",
   default: "Antwerp",

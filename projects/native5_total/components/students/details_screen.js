@@ -18,6 +18,7 @@ import {
 export default function StudentsDetailsScreen({ route, navigation }) {
   // gets the route id (react does that for you).
   const { id } = route.params;
+  // Controlled component:
   const [student, setStudent] = useState({
     id: 0,
     firstname: "",

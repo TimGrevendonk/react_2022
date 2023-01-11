@@ -1,4 +1,4 @@
 {
-    "qlendpoint": "https://tender-mako-76.hasura.app/v1/graphql",
-    "qlkey": "DjQ9sdu5HqwdcKoJZ5x01wT2YK3tX5Qb5cMSSmAPR8lExuOzbNdpVfuymMazUDWx"
+  "qlendpoint": "https://timgrevendonkdata.hasura.app/v1/graphql",
+  "qlkey": "DjQ9sdu5HqwdcKoJZ5x01wT2YK3tX5Qb5cMSSmAPR8lExuOzbNdpVfuymMazUDWx"
 }
